@@ -921,9 +921,8 @@ export class PluginLedgerConnectorEthereum
             )}`,
           );
         }
-        tx.maxPriorityFeePerGas = txConfig.gasConfig.gasPrice;
-        tx.maxFeePerGas = txConfig.gasConfig.gasPrice;
-        tx.gasLimit = txConfig.gasConfig.gas;
+        tx.gasPrice = txConfig.gasConfig.gasPrice;
+        tx.gas = txConfig.gasConfig.gas;
       } else {
         tx.maxPriorityFeePerGas = txConfig.gasConfig.maxPriorityFeePerGas;
         tx.maxFeePerGas = txConfig.gasConfig.maxFeePerGas;
